@@ -36,3 +36,5 @@
   
 - Step 7. Give it to run.
 
+### Pagina de escanear codigos QR
+📌 Live site URL: [here](https://qrplanet.com/es)
