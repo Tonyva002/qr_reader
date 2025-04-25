@@ -7,12 +7,18 @@ class ScanList extends StatelessWidget {
 
   final String type;
 
- const ScanList({required this.type});
+ const ScanList({super.key, required this.type});
 
   @override
   Widget build(BuildContext context) {
     final scanProvider = Provider.of<ScanProvider>(context);
     final scans = scanProvider.scans;
+
+    if (scans.isEmpty) {
+      return Center(
+        child: Text('Toque el botón para escanear un código QR', style: TextStyle(color: Colors.blue, fontSize: 18),),
+      );
+    }
 
     return ListView.builder(
         itemCount: scans.length,
